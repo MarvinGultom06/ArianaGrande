@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Josefin+Sans&family=Libre+Baskerville:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Fuggles&family=Josefin+Sans&family=Libre+Baskerville:ital@1&family=Noto+Color+Emoji&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Fuggles&family=Josefin+Sans&family=Libre+Baskerville:ital@1&family=Merriweather:wght@700&family=Noto+Color+Emoji&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+*:focus{
+    outline: none;
+}
+
+body{
+    background-color: #a5a5a5;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.ari{
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    border: 3px solid #a5a5a5;
+    border-radius: 20px;
+    box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.15);
+    padding: 0 40px 0 80px;
+    z-index: 10;
+    height: 85vh;
+    width: 85%;
+}
+.ari nav{
+    display: flex;
+    height: 70px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.ari nav .title{
+    color: #39393a;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.ari nav .nav-links a.active{
+    color: #39393a;
+}
+.ari .content{
+    display: flex;
+    padding-right: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+.ari .content .text{
+    width: 50%;
+}
+.ari .content .text h1{
+    margin-bottom: 20px;
+    font-size: 50px;
+    color: #fff;
+    font-family: 'Merriweather', serif;
+}
+.ari .content .text h4{
+    color: #39393a;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.ari .content .text p{
+    color: #4f4f4f;
+    margin-top: 70px;
+    font-size: 20px;
+    font-family: 'Anton', sans-serif;
+}
+.ari .content .text button{
+    padding: 20px 20px;
+    background-color: #39393a;
+    border: 2px solid #39393a;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.ari .content .text button:hover{
+    color: #39393a;
+    transition: 0.3s;
+    background-color: transparent;
+}
+
+.ari .content .img{
+    width: 30%;
+}
+.ari .content .img img{
+    width: 100%;
+}
+
+.ari .title, 
+.ari .content .text h1, 
+.ari .content .text h4,
+.ari .content .text button{
+    position: relative;
+    opacity: 0;
+    top: 50px;
+    animation: slide-right .5s linear forwards;
+}
+.ari .title{
+    animation-delay: 0.2s;
+}
+.ari .content .text h1{
+    animation-delay: 0.5s;
+}
+.ari .content .text h4{
+    animation-delay: 0.9s;
+}
+.ari .content .text button{
+    animation-delay: 1.8s;
+}
+@keyframes slide-top{
+    0%{
+        top: 50px;
+    }
+    100%{
+        top: 0;
+    }
+}
+
+.ari .content .text p{
+    position: relative;
+    left: 100px;
+    animation: slide-right .5s linear forwards;
+    animation-delay: 1.3s;
+    opacity: 0;
+}
+@keyframes slide-right{
+    0%{
+        left: 100px;
+        opacity: 0;
+    }
+    100%{
+        left: 0;
+        opacity: 1;
+    }
+}
+
+.ari .content .img img{
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fade-img .5s linear forwards;
+    animation-delay: 2.1s;
+}
+@keyframes fade-img{
+    0%{
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
